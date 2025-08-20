@@ -1,4 +1,4 @@
-import { SwapSide } from './constants';
+import { SwapSide } from "./constants";
 
 export type Address = string;
 export type NumberAsString = string;
@@ -27,6 +27,7 @@ export type OptimalSwapExchange<T> = {
   percent: number;
   data?: T;
   poolAddresses?: Array<Address>;
+  poolIdentifiers?: Array<string>;
 };
 
 export type OptionalRate = {
@@ -67,6 +68,6 @@ export type OptimalRate = {
 };
 
 export enum ParaSwapVersion {
-  V5 = '5',
-  V6 = '6.2',
+  V5 = "5",
+  V6 = "6.2",
 }
