@@ -12,12 +12,8 @@ export type OptimalRoute = {
   swaps: OptimalSwap[];
 };
 
-export type MergedSwap = OptimalSwap & {
-  srcAmount: NumberAsString;
-  destAmount: NumberAsString;
-};
-
 export type OptimalSwap = {
+  isMergedSwap?: boolean; // `true`, when used in multi-route (aka merged), and amounts are scaled
   srcToken: Address;
   srcDecimals: number;
   destToken: Address;
@@ -55,7 +51,7 @@ export type OptimalRate = {
   destAmount: NumberAsString;
   destUSD: NumberAsString | null;
   bestRoute: OptimalRoute[];
-  mergedSwaps?: MergedSwap[]; // used for multi-route swaps
+  mergedSwaps?: OptimalSwap[]; // used for multi-route swaps
   gasCostUSD: NumberAsString;
   gasCost: NumberAsString;
   gasCostL1Wei?: string; // L1 surcharge on optimism
