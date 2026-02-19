@@ -43,6 +43,8 @@ export enum ContractMethodV6 {
   swapExactAmountInOnCurveV2 = 'swapExactAmountInOnCurveV2',
   swapOnAugustusRFQTryBatchFill = 'swapOnAugustusRFQTryBatchFill',
   swapExactAmountInOutOnMakerPSM = 'swapExactAmountInOutOnMakerPSM',
+  swapExactAmountInPro = 'swapExactAmountInPro',
+  swapExactAmountOutPro = 'swapExactAmountOutPro',
 }
 
 export const ContractMethod = { ...ContractMethodV5, ...ContractMethodV6 };
@@ -65,6 +67,8 @@ export const DirectContractMethodsWithFeeModel: ContractMethod[] = [
   ContractMethodV6.swapExactAmountOutOnBalancerV2,
   ContractMethodV6.swapExactAmountInOnCurveV1,
   ContractMethodV6.swapExactAmountInOnCurveV2,
+  ContractMethodV6.swapExactAmountInPro,
+  ContractMethodV6.swapExactAmountOutPro,
 ];
 
 export const DirectContractMethods = [
