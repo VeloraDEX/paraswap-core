@@ -48,6 +48,7 @@ export type OptimalRate = {
   destToken: Address;
   destDecimals: number;
   destAmount: NumberAsString;
+  destAmountAfterFee?: NumberAsString;
   destUSD: NumberAsString | null;
   bestRoute: OptimalRoute[];
   gasCostUSD: NumberAsString;
