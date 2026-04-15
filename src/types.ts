@@ -43,11 +43,13 @@ export type OptimalRate = {
   network: number;
   srcToken: Address;
   srcDecimals: number;
+  srcAmountAfterFee?: NumberAsString; // used for BUY with partner fee
   srcAmount: NumberAsString;
   srcUSD: NumberAsString | null;
   destToken: Address;
   destDecimals: number;
   destAmount: NumberAsString;
+  destAmountAfterFee?: NumberAsString; // used for SELL with partner fee
   destUSD: NumberAsString | null;
   bestRoute: OptimalRoute[];
   gasCostUSD: NumberAsString;
