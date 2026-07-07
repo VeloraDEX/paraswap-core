@@ -28,6 +28,10 @@ export type OptimalSwapExchange<T> = {
   data?: T;
   poolAddresses?: Array<Address>;
   poolIdentifiers?: Array<string>;
+  // Revertable fallback alternative for the same hop: if the primary swap
+  // reverts on-chain, the executor runs this exchange instead from the same
+  // input (encoded by dex-lib as a revertable group on Executor01/02).
+  fallback?: OptimalSwapExchange<T>;
 };
 
 export type OptionalRate = {
