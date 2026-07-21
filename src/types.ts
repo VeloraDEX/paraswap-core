@@ -28,6 +28,9 @@ export type OptimalSwapExchange<T> = {
   data?: T;
   poolAddresses?: Array<Address>;
   poolIdentifiers?: Array<string>;
+  // The contract the hop's swap call targets (router/settlement) — lets
+  // analytics attribute on-chain reverts to a venue.
+  targetExchange?: Address;
   // Revertable fallback alternative for the same hop: if the primary swap
   // reverts on-chain, the executor runs this exchange instead from the same
   // input (encoded by dex-lib as a revertable group on Executor01/02).
